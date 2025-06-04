@@ -1,0 +1,63 @@
+:root {
+  --color-white: #fff;
+  --color-red: #f53855;
+  --color-light-red: #ffecec;
+  --color-gray: #4f5665;
+  --color-black: #0b132a;
+  --color-border-gray: #eeeff2;
+  --color-border: #ddd;
+  --color-black-shadow: rgba(13, 16, 37, 0.112);
+
+  --color-background: var(--color-white);
+  --color-background-gray: #fbfbfb;
+  --color-bg-gray: #f8f8f8;
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray);
+  --color-button-bg: var(--color-red);
+  --color-button-hover: #f9546d;
+  --color-button-border: var(--color-red);
+  --desktop-width: 90rem;
+
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-25: 1.563rem;
+  --font-size-35: 2.2rem;
+  --font-size-50: 3.125rem;
+
+  --about-pic-width: 38.203rem;
+  --appStatistics-pic-width: 9.4rem;
+  --features-pic-width: 31.757rem;
+  --plan-pic-width: 9.057rem;
+  --huge-global-pic: 66.25rem;
+  --website-pic-width: 12.5rem;
+
+
+  --border-radius-10: 0.625rem;
+  --border-radius-50: 3.125rem;
+  --gutter: 2rem;
+  --gutter-padding: 3.125rem;
+  --gutter-margin: 3.125rem;
+  --gutter-about: 6.4rem;
+
+  --gap-section-1: 5.5rem;
+  --gap-section-2: 6rem;
+
+  --padding-size-13: 0.81rem;
+  --padding-size-20: 1.25rem;
+  --padding-size-45: 2.81rem;
+  --padding-size-60: 3.75rem;
+  --padding-size-65: 4.375rem;
+  --padding-size-70: 4.375rem;
+
+  --transition: 0.3s;
+  --customers-height: 14.375rem;
+  --customers-width: 25rem;
+  --overflow-section: 71.25rem;
+  --subscribe-height: 7.5rem;
+}

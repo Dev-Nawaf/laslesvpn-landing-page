@@ -1,0 +1,452 @@
+@use "./mixins.scss";
+
+@media (max-width:1024px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .header {
+        z-index: 3;
+        gap: 2rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        margin-block-end: calc(var(--gap-section-2) / 2);
+        margin-block-start: calc(var(--gap-section-1) / 2);
+
+
+        align-items: center;
+        justify-items: center;
+
+        &__pic-content {
+            grid-row: 1;
+        }
+
+        &__data {
+            align-items: center;
+            justify-items: center;
+        }
+
+        .appStatistics {
+            padding: 1rem 2rem;
+            margin-inline-end: 0;
+            font-size: var(--font-size-18);
+            gap: calc(var(--gutter) * 2);
+        }
+    }
+
+    .features {
+        flex-direction: column;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        margin-block-end: calc(var(--gap-section-2) / 2);
+        gap: 1rem;
+
+        &__objective {
+            text-align: center;
+        }
+
+        &__pic-content {
+            justify-content: center;
+        }
+
+
+
+        &-data {
+            gap: var(--padding-size-13);
+        }
+
+        &__list {
+            gap: 0;
+        }
+
+
+        &__name {
+            font-size: var(--font-size-20);
+            padding-block: 1rem;
+            padding-inline-start: 2.2rem;
+
+        }
+    }
+
+    .pricing {
+        gap: var(--gutter-padding);
+        padding-block-start: 3rem;
+
+        &__box {
+            padding-inline: 1.5rem;
+        }
+    }
+
+    .worldVPN {
+
+        &__img,
+        &__websiteLogo {
+            width: 80%;
+        }
+    }
+
+    .customers {
+        gap: var(--gutter-padding);
+
+        &__wrapper {
+            max-width: calc(var(--customers-width) * 2 + var(--gutter-padding) * 2);
+            -webkit-overflow-scrolling: touch;
+            align-self: center;
+        }
+
+        &__box {
+            flex: 0 0 var(--customers-width);
+        }
+
+        &__button {
+            font-size: var(--font-size-14);
+        }
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+
+        &__content {
+            gap: 1rem;
+            font-size: var(--font-size-18);
+            align-items: center;
+        }
+
+        &__links {
+            grid-row: 1;
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .navigationContent {
+        gap: 1rem;
+    }
+
+    .signContent {
+        padding-top: 0;
+        gap: 1rem;
+        margin-inline-end: 0;
+
+        &__sign-up {
+            padding: var(--padding-size-13);
+        }
+    }
+
+    .about .appStatistics {
+        gap: var(--gutter);
+
+        &_img {
+            width: 100%;
+        }
+    }
+
+    .pricing__plans {
+        gap: 1rem;
+    }
+
+    .customers {
+        &__wrapper {
+            max-width: var(--customers-width);
+
+        }
+
+        &__box {
+            flex: 0 0 calc(var(--customers-width) - 1rem);
+            height: calc(var(--customers-height) + 1rem);
+        }
+    }
+
+    .subscribe {
+        text-wrap: nowrap;
+
+        &__box {
+            padding-inline: var(--padding-size-45);
+        }
+    }
+}
+
+@media (max-width:600px) {
+
+    .container {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .h1-heading {
+        font-size: var(--font-size-35);
+        font-weight: var(--font-weight-500);
+        line-height: 1.2;
+    }
+
+    .h2-heading,
+    .h3-heading {
+        font-size: var(--font-size-25);
+    }
+
+    .header {
+        padding: 0;
+
+        &::before {
+            z-index: 0;
+            justify-self: center;
+        }
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.75rem;
+        z-index: 0;
+        align-self: center;
+        justify-self: flex-end;
+        margin-inline-end: 1rem;
+    }
+
+    .burger-menu__bar {
+        height: 0.3rem;
+        width: 4.375rem;
+        background-color: var(--color-text-primary);
+        transition: var(--transition-timing)transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    .logoContent {
+        z-index: 1;
+        margin: 0;
+        margin-inline-start: 1rem;
+        padding: 1rem 0;
+        order: -1;
+        flex: 1;
+    }
+
+    .navigationContent {
+        display: none;
+        position: absolute;
+        width: 100vw;
+        background-color: var(--color-background);
+        top: 0;
+        padding: 1rem 0;
+        z-index: -1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navigation {
+        margin-inline: 0;
+    }
+
+    .signContent {
+        padding-top: 1rem;
+        gap: 1rem;
+        margin-inline-end: 0;
+
+        &__sign-up {
+            padding: var(--padding-size-13);
+        }
+    }
+
+
+    .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
+        width: 4rem;
+        transform: translateY(11px) rotate(40deg);
+    }
+
+    .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header:has(.burger-menu__checkbox:checked) {
+        .burger-menu__bar:nth-child(3) {
+            width: 4rem;
+            transform: translateY(-13px) rotate(-40deg);
+        }
+    }
+
+    .burger-menu__checkbox:checked~.navigationContent {
+        display: flex;
+        top: 100%;
+    }
+
+    .about {
+        margin-block-start: calc(var(--gap-section-1) / 4);
+        margin-block-end: 2rem;
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.4;
+        }
+
+        &__link {
+            display: flex;
+            align-self: flex-start;
+        }
+
+        &__pic-content {
+            grid-row: 1;
+            justify-content: center;
+        }
+
+        &__data {
+            align-items: flex-start;
+        }
+
+        &__pic {
+            width: 100%;
+        }
+
+        .appStatistics {
+            padding-block: 2rem;
+            padding-inline: var(--gutter);
+            margin-inline-end: 0;
+            font-size: var(--font-size-18);
+            justify-self: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            &__border {
+                height: 0.2rem;
+                width: 11rem;
+            }
+        }
+
+
+    }
+
+    .features {
+        margin-block-end: 0;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.2;
+            text-wrap: wrap;
+            text-align: start;
+        }
+    }
+
+    .pricing {
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.2;
+            text-wrap: wrap;
+        }
+
+        &__plans {
+            gap: 1rem;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__box {
+            gap: 1rem;
+            padding-block: 1rem;
+        }
+
+        &-heading {
+            line-height: 1.2;
+        }
+
+        &__feature {
+            line-height: 1.8;
+        }
+    }
+
+    .worldVPN {
+        padding-block-start: var(--gutter-margin);
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.2;
+            text-wrap: wrap;
+        }
+    }
+
+    .customers {
+        &__wrapper {
+            max-width: var(--customers-width);
+
+        }
+
+        &__box {
+            flex: 0 0 calc(var(--customers-width) - 1rem);
+            height: calc(var(--customers-height) + 1rem);
+        }
+
+        &__img {
+            width: 25%;
+        }
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.2;
+            text-wrap: wrap;
+        }
+
+        &__button {
+            padding: var(--padding-size-13);
+
+            & svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+    }
+
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+
+        .h3-heading {
+            font-size: var(--font-size-20);
+        }
+
+        &__content {
+            gap: 1rem;
+        }
+
+        &__objective {
+            font-size: var(--font-size-14);
+            line-height: 1.2;
+            text-wrap: wrap;
+        }
+
+        &__box {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: auto;
+            height: auto;
+            padding-block: var(--padding-size-13);
+        }
+
+        &__link {
+            padding-inline: 3rem;
+        }
+    }
+
+    .footer {
+        gap: 1rem;
+    }
+}

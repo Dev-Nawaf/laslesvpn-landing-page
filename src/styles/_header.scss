@@ -1,0 +1,96 @@
+@use "./mixins.scss";
+
+.header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 1;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+  background-color: var(--color-background);
+
+}
+
+.burger-menu__checkbox {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.logoContent {
+  @include mixins.logoContent();
+}
+
+.navigationContent {
+  display: flex;
+  flex: 1;
+}
+
+.navigation {
+  display: flex;
+  margin-inline: auto;
+  transition: var(--transition);
+  background-color: var(--color-background);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--color-gray);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &__link:hover,
+  &__link:active {
+    text-decoration: underline;
+    color: var(--color-text-primary);
+    user-select: none;
+    -webkit-user-select: none;
+    transition: color var(--transition) ease-in-out;
+  }
+}
+
+.signContent {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter);
+  font-weight: var(--font-weight-500);
+  margin-inline-end: var(--gutter-padding);
+  text-wrap: nowrap;
+
+  &__sign-up {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+    padding: var(--padding-size-13) var(--padding-size-45);
+    border-radius: var(--border-radius-50);
+  }
+
+  &__sign-up:hover {
+    text-decoration: underline;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    transition: color var(--transition) ease-in-out;
+  }
+
+  &__sign-in:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,39 @@
+@use "mixins";
+
+.worldVPN {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding-block-start: 9rem;
+  padding-block-end: var(--gutter-margin);
+
+  &__content {
+    @include mixins.contant();
+  }
+
+  &__objective {
+    @include mixins.objective();
+  }
+
+  &__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__image {
+    max-width: var(--huge-global-pic);
+  }
+
+  &__websites {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gutter-padding);
+  }
+
+  &__websiteLogo {
+    max-width: var(--website-pic-width);
+  }
+}

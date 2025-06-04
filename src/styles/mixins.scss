@@ -1,0 +1,53 @@
+@mixin towColumns($column-gap, $row-gap) {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+@mixin contant {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  gap: var(--padding-size-20);
+}
+
+@mixin objective {
+  font-size: var(--font-size-16);
+  line-height: 1.8;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
+@mixin link {
+  display: flex;
+  background-color: var(--color-button-bg);
+  color: var(--color-white);
+  padding: 1rem 4.8rem;
+  border-radius: var(--border-radius-10);
+  user-select: none;
+  box-shadow: 0 10px 25px var(--color-red);
+}
+
+@mixin linkHover {
+  color: var(--color-white);
+  background-color: var(--color-button-hover);
+  transition: background-color var(--transition) ease-in-out;
+}
+
+@mixin logoContent {
+  display: flex;
+  gap: 0.8rem;
+  user-select: none;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__logo {
+    max-width: 100%;
+  }
+
+  &__logo-title {
+    font-size: var(--font-size-20);
+    font-weight: 500;
+  }
+}

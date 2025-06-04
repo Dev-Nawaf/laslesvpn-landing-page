@@ -1,0 +1,55 @@
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: "Rubik";
+  line-height: 1.2;
+  font-weight: var(--font-weight-400);
+  color: var(--color-text-primary);
+  background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 50%,
+      var(--color-background-gray) 50%, var(--color-background-gray) 100%);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  min-height: 100vh;
+  padding: var(--gutter);
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.h1-heading {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-50);
+  font-weight: var(--font-weight-500);
+  line-height: 1.4;
+}
+
+.h1__span {
+  font-weight: var(--font-weight-700);
+}
+
+.h2-heading {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-500);
+  line-height: 1.42;
+}
+
+.h3-heading {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-500);
+  line-height: 1.42;
+  text-align: center;
+}
