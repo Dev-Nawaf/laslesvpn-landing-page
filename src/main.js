@@ -1,3 +1,4 @@
+import "./styles/style.scss";
 import { slideClickHandlers } from "./utils";
 
 const pricingBoxes = document.querySelectorAll(".pricing__box");
